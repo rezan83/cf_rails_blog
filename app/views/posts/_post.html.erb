@@ -1,0 +1,14 @@
+
+<div class="jumbotron">
+    <h1 class="display-4"><%= post.title %></h1>
+    <p class="lead"><%= post.body %></p>
+    <hr class="my-4">
+    <p><%= post.user.name %></p>
+    <p class="lead">
+        <div id="btn" class="btn btn-primary">
+            <%= link_to 'Show', post, :class => "btn" %> |
+            <%= link_to 'Edit', edit_post_path(post), :class => "btn" %> |
+            <%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn"%>
+        </div>
+    </p>
+</div>

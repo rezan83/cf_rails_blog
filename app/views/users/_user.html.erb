@@ -1,0 +1,12 @@
+<div class="jumbotron">
+    <h1 class="display-4"><%= user.name %></h1>
+    <p class="lead"><%= user.profile %></p>
+    <hr class="my-4">
+    <p class="lead">
+        <div id= "btn" class="btn btn-primary">
+            <%= link_to 'Show', user, :class => "btn" %> |
+            <%= link_to 'Edit', edit_user_path(user), :class => "btn" %> |
+            <%= link_to 'Delete', user, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn"%>
+        </div>
+    </p>
+</div>
